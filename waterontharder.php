@@ -10,7 +10,7 @@ fclose ($test_data);
 $parsed_json = $parsed_json['result'][0];
 $waterToday = filter_var($parsed_json['CounterToday'], FILTER_SANITIZE_NUMBER_INT);
 //echo "WaterToday: ".$waterToday." liter \n";
-if ($waterToday > "110") {
+if ($waterToday > "120") {
   $run_update = file_get_contents($domoticzurl."type=command&param=udevice&idx=539&svalue=1");
   //echo "run_update: ".$run_update." \n";
   $logmsg = "Waterontharder is geregeneerd.";
